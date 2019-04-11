@@ -3,7 +3,7 @@ NOTIFICATION_RECIPIENTS=$2 # you can concatenate email addresses with a comma ,
 CURRENT_TAG=$(cat .current-tag)
 echo "CURRENT_TAG tag is $CURRENT_TAG"
 git fetch --all
-LATEST_TAG=$(git describe --tags)
+LATEST_TAG=$(git tag | tail -n 1)
 echo "LATEST_TAG is $LATEST_TAG"
 
 notify_success () {
