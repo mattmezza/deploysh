@@ -7,7 +7,7 @@ LATEST_TAG=$(git tag | tail -n 1)
 echo "LATEST_TAG is $LATEST_TAG"
 
 notify_success () {
-    echo "$APP v$LATEST_TAG has been successfully deployed.\n\nWas at $CURRENT_TAG, now at $LATEST_TAG" | mail -s "[$APP v$LATEST_TAG] deploy successfull" $NOTIFICATION_RECIPIENTS
+    echo "$APP v$LATEST_TAG has been successfully deployed.\n\nWas at $CURRENT_TAG, now at $LATEST_TAG" | mail -s "[$APP v$LATEST_TAG] deploy successful" $NOTIFICATION_RECIPIENTS
 }
 
 notify_rollback () {
