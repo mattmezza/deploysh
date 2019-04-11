@@ -19,11 +19,11 @@ notify_failure () {
 }
 
 deploy () {
-    git checkout $LATEST_TAG && composer install && echo $LATEST_TAG > .current-version && notify_success
+    git checkout $LATEST_TAG && composer install && echo $LATEST_TAG > .current-tag && notify_success
 }
 
 rollback () {
-    git checkout $CURRENT_TAG && composer install && echo $CURRENT_TAG > .current-version && notify_failure
+    git checkout $CURRENT_TAG && composer install && echo $CURRENT_TAG > .current-tag && notify_failure
 }
 
 if [[ "$CURRENT_TAG" != "$LATEST_TAG" ]]; then
