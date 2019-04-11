@@ -1,6 +1,6 @@
 APP=$1
 NOTIFICATION_RECIPIENTS=$2 # you can concatenate email addresses with a comma ,
-CURRENT_TAG=$(cat deploy/.current-tag)
+CURRENT_TAG=$(cat .current-tag)
 echo "CURRENT_TAG tag is $CURRENT_TAG"
 git fetch --all
 LATEST_TAG=$(git describe --tags)
