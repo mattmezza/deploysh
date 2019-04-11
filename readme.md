@@ -4,7 +4,7 @@ deploysh
 ### crontab
 
 - `crontab -e`
-- `*/5 * * * * cd /home/gitrepo && /usr/deploysh/branch.sh "my app" "email@gmail.com,other@guy.people" master
+- `*/5 * * * * cd /home/gitrepo && /usr/deploysh/branch.sh "my app" "email@gmail.com,other@guy.people" master`
 
 
     _or_
